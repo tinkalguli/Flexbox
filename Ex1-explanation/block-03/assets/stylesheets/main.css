@@ -1,0 +1,136 @@
+/*=======================================*
+
+                css reset
+
+*========================================*/
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*=======================================*
+
+                  global
+
+*========================================*/
+
+*, *:before, *:after {
+   box-sizing: border-box;
+ }
+
+h2,
+a {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-evenly;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*=======================================*
+
+                  typography
+
+*========================================*/
+a {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+small {
+  font-size: .8em;
+}
+
+/*=======================================*
+
+                  header
+
+*========================================*/
+
+.header {
+  background: #202020;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.navbar {
+  flex: 0 1 30%;
+}
+
+.logo {
+  flex: 0 1 25%;
+  color: #fff;
+}
+
+.ul {
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 30%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  flex: 0 1 17%;
+}
+
+
+/*=======================================*
+
+                  article
+
+*========================================*/
+
+.article {
+  padding: 7em 10px;
+  justify-content: space-evenly;
+}
+
+.art {
+  flex: 0 1 45%;
+}
+
+/*=======================================*
+
+                  section
+
+*========================================*/
+
+.bar {
+  color: #fff;
+  background: #202020;
+  padding: 3% 0;
+  text-align: center;
+}
+
+.gallery {
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  height: 64em;
+}
+
+.flex-img {
+  width: 48%;
+  flex-shrink: 1;
+}
