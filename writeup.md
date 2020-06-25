@@ -40,7 +40,13 @@ We have some properties for flex-container and some properties for flex-items . 
 
 ### 1.Properties of Flex-container
 
->First we will discuss about main-Axis's properties which is applied based on the main-Axis .
+>First we will discuss about main-Axis's properties which is applied based on the **main-Axis** .
+
+- A. Display
+- B. Flex-direction
+- C. Flex-wrap
+- D. Flex-flow
+- E. Justify-content
 
 #### A. Display
 
@@ -292,6 +298,9 @@ The extra space in the flex container will be distributed in such a way that, th
 
 >Now we will look into the properties which are based on the **cross-Axis** .
 
+- A. Align-items
+- B. Align-content
+
 #### A. Align Items
 
 The **align-items** property is similar to **justify-content** property . The only difference is that the align-items property works on "cross-axis". It defines how the "flex-items" will be laid out on the "cross-axis" inside a "flex container". This property has five values i.e. **stretch**, **flex-start**, **flex-end**, **center**, **baseline** . Items should have some fix  height(items in a row) or width(items in a column) to get the effect of these property values .
@@ -400,7 +409,7 @@ The baseline value aligns the items based on the baseline of the text. this valu
     background: #FAFFFC;
     border: 5px solid #182945;
     height: 350px;
-    aign-items: baseline;
+    align-items: baseline;
   }
   .item {
     background: #9EDDEB;
@@ -539,3 +548,315 @@ The spaces are evenly distributed around the flex-items on the "cross-axis" as j
 ```
 
 ![align-content: space-around;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-around.png)
+
+### 1.Properties of Flex-items
+
+>First we will discuss about main-Axis's properties which is applied based on the **main-Axis** .
+
+- A. Order
+- B. Flex-grow
+- C. Flex-shrink
+- D. Flex-basis
+
+#### A. Order
+
+We know that the elements are laid out according to the order in which it is written in the HTML document . The **order** property is used to reorder the flex-item within a flex-container without changing the source code in an HTML document . The property accepts unitless value in number, it can be negative or positive . te default value for this property is "0" . The items are reordered according to the values applied to the order property, from lowest to highest . If the order value for the items is the same then the items are laid out according to the order appeared in HTML source code . Lets take an example :
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+  }
+  .item1 {
+    order: 1;
+  }
+```
+
+![order: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/order1.png)
+
+In the above example we assign **order: 1** to the item1 . Item1 has laid down at the end because order of the item1 is bigger than the other items(default **order: 0**) . Lets take an example which will help you understand the negative order and regarding the order in the html  :
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+  }
+  .item1 {
+    order: 2;
+  }
+  .item2 {
+    order: 1;
+  }
+  .item3 {
+    order: 1;
+  }
+  .item4 {
+    order: -1;
+  }
+```
+
+![order: -1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/order2.png)
+
+In the above example item4 has laid down in the first place and item1 has laid down at the end because item4 has lowest order value which is "-1" and Item1 has the largest order value which is "2" . Item2 and item3 has the same order which is "1" so two of them comes after the item1 and they have laid down according to html markup order .
+
+#### B. Flex Grow
+
+The **flex-grow** property allows the items to grow if there is extra space inside the flex container . The property accepts unitless value in number which provides the ability to grow to the items . By default, the value for the flex-grow property is "0", which means the size of the item will be auto . It may accept any value but not negative . Suppose we have two items inside a flex-container and we want the items to grow in the same proportionality. Then we can set the value 1 for flex-grow property for the items . If all the items have flex-grow set to 1 the extra space will be distributed equally to all the items .
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;padding: 40px 50px;
+    margin: 10px;
+    flex-grow: 1;
+  }
+```
+
+![flex-grow: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-grow1.png)
+
+If one of the items has a value of 2, the remaining space would take up twice as much space as the others .
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+  }
+  .item1 {
+    flex-grow: 2;
+  }
+  .item2 {
+    flex-grow: 1;
+  }
+```
+
+![flex-grow: 2;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-grow2.png)
+
+#### C. Flex Shrink
+
+The **flex-shrink** property is opposite to the flex-grow property. It allows the items to shrink if there is no extra space in the container . If we reduce the size of screen we will find that width of the items is also reducing as the size of screens is reducing . By default, the value for flex-shrink property is "1" and accepts values which is greater than "1" . Negative values are invalid . For a better understanding of flex-shrink property, we have to applied **flex-basis** property. The **flex-basis** property is to set the initial size of the item before the item will grow or shrink in a flex-container according to the extra space . Lets take an example :
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+    flex-basis: 300px;
+    flex-shrink: 1;
+  }
+```
+
+![flex-shrink: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink1.png)
+
+In this above example we have applied **flex-shrink: 1** . If we reduce the size of the screen items will also reduce .
+
+![flex-shrink: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink2.png)
+
+If we assign **flex-shrink: 0** then the items will overflow in the flex-container . Lets see with an example :
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+    flex-basis: 300px;
+    flex-shrink: 0;
+  }
+```
+
+![flex-shrink: 0;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink3.png)
+
+#### D. Flex Basis
+
+The **flex-basis** property is somewhat similar to the width property, as it accepts the values(in px, %, em, rem, etc.) similar to the width property . The flex-basis property is applied to set a base width(in case or row) or height(in case of column) or size of the flex-item from where the item will grow or shrink if necessary . By default, the value for flex-basis property is auto, which means the base size of the item will be computed based on the content inside it plus whatever the padding we will apply to the item .
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+  </div>
+
+  .container {
+    display: flex;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+    flex-basis: 200px;
+  }
+```
+
+![flex-basis: 200px;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-basis.png)
+
+> * Flex
+This is the default value for the flex property where the first value is for flex-grow, second is for flex-shrink and the last value is for flex-basis . The last two value for flex property is optional . This is the default value for the flex property where the first value is for flex-grow, second is for flex-shrink and the last value is for flex-basis . The last two value for flex property is optional .
+
+```
+.item {
+    flex: 0 1 auto;
+  }
+```
+
+>If we ignore the last two values which is **flex-shrink** and **flex-basis** we can apply only **flex-grow** value to the **flex** property . Let's take an example with **flex-grow** value "1" .
+
+```
+.item {
+    flex:  1;
+  }
+```
+
+>Now we will discuss about cross-Axis's properties which is applied based on the **cross-Axis** .
+
+- A. Align-self
+
+#### A. Align-self
+
+The **align-self** property is exactly similar to align-items property but only difference is **align-self** is applied to the flex items and **align-items** property is applied to the flex container . The **align-self** can take six values i.e. **auto**,  **stretch**,  **flex-start**,  **flex-end**,  **center**,  **baseline** . To get the result of this property there will be some space in the **cross-axis** because it always works on the **cross-axis** .
+
+```
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">2</div>
+  </div>
+
+  .container {
+    display: flex;
+    height: 350px;
+    align-items: flex-start;
+  }
+  .item {
+    background: #9EDDEB;
+    padding: 40px 50px;
+    margin: 10px;
+  }
+```
+
+##### (i) auto
+
+The auto value for **align-self** property inherits, whatever the value is set for **align-items** in the flex-container. If it is **flex-star**, the **align-self** value will be also **flex-start** .
+
+```
+.item3 {
+    align-self: auto;
+  }
+```
+
+![align-self: auto;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-start.png)
+
+##### (ii) stretch
+
+The stretch property is to stretch out the size of individual items on the **cross-axis** to fill the extra space.
+
+```
+.item3 {
+    align-self: stretch;
+  }
+```
+
+![align-self: stretch;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-stretch.png)
+
+##### (iii) flex-start
+
+The item will be aligned from the starting point on the **cross-axis**.
+
+```
+.item3 {
+    align-self: flex-start;
+  }
+```
+
+![align-self: flex-start;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-start.png)
+
+##### (iv) flex-end
+
+The item will be aligned towards the endpoint on the **cross-axis** .
+
+```
+.item3 {
+    align-self: flex-end;
+  }
+```
+
+![align-self: flex-end;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-end.png)
+
+##### (v) center
+
+The item will be aligned at the center on the **cross-axis** .
+
+```
+.item3 {
+    align-self: center;
+  }
+```
+
+![align-self: center;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-center.png)
+
+##### (vi) baseline
+
+We have already seen baseline value for align-items property for the **flex-container** . The baseline value for **align-self** property also works based on the baseline of the content .
+
+```
+.item3 {
+    align-self: baseline;
+  }
+```
+
+![align-self: baseline;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-baseline.png)
+
+
+>It is better to use flexbox instead of float and inline-block technique .
