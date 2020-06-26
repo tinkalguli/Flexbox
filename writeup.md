@@ -4,13 +4,15 @@ Flexbox gives us a efficient way of layout . We can place contents in different 
 
 To apply flexbox to a layout we have to assign **display: flex or display: inline-flex** to the container or the items. If we set the **display: flex or display: inline-flex** property to an element then the element convert into a **flex container** and the child elements will convert into **flex items** .
 
+![image](https://miro.medium.com/max/1400/1*yhE55Dq-RBqWJ9uNqY9y2g.png)
+
 Before discuss about flexbox we should know about ***axis*** where the flex-items will lay down.
 
 > Main-Axis : Main-Axis appears in the direction of the flex-items. If the flex-items lay down in a row(horizontally) then the **X-Axis**(horizontal-Axis) will be the **main-Axis** and if the flex-items lay down in a column then the **Y-axis**(vertical-Axis) will be the **main-Axis** of the flexbox.
 >
 > Cross-Axis : Cross-Axis appears in the perpendicular direction of the flex-items or the main-Axis . If the flex-items lay down in a row(horizontally) then the **Y-Axis**(vertical-Axis) will be the **cross-Axis** and if the flex-items lay down in a column then the **X-axis**(horizontal-Axis) will be the **cross-Axis** of the flexbox.
 
-![image](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/axis.png)
+![image](https://miro.medium.com/max/1400/1*1_U9YdcsU7ILW19Z47eJDQ.png)
 
 
 ## Properties of flexbox
@@ -62,7 +64,7 @@ It works normally , it takes the whole width of the display .
   }
 ```
 
-![display: flex](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/intro.png)
+![display: flex](https://miro.medium.com/max/1400/1*LAq8okZnH5OBZjgtenQEQQ.png)
 
 
 ##### (ii) inline-flex
@@ -75,7 +77,7 @@ This value is similar to the **inline-block** display property , it takes the wi
   }
 ```
 
-![display: inline-flex](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/inline-flex.png)
+![display: inline-flex](https://miro.medium.com/max/990/1*Yx6I-DdGWKH09HNM_hj9Dg.png)
 
 
 #### B. Flex Direction
@@ -92,7 +94,7 @@ This is the default value for flex-direction . If we apply this value then we do
   }
 ```
 
-![flex-direction: row;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/row.png)
+![flex-direction: row;](https://miro.medium.com/max/1400/1*lueVXyQvXPxSxNKo4YvNCw.png)
 
 ##### (ii) column
 
@@ -104,7 +106,7 @@ This value will set the items from top to bottom means vertically . In this situ
   }
 ```
 
-![flex-direction: column;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/column.png)
+![flex-direction: column;](https://miro.medium.com/max/1400/1*odCdqAyW8KPpdkcYjuHauA.png)
 
 ##### (iii) row-reverse
 
@@ -116,7 +118,7 @@ By applying this value we will get the same result as row(default) value but in 
   }
 ```
 
-![flex-direction: row-reverse;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/row-reverse.png)
+![flex-direction: row-reverse;](https://miro.medium.com/max/1400/1*Nmu8fZisYCWDgyr23u7NLQ.png)
 
 ##### (iv) column-Reverse
 
@@ -128,7 +130,7 @@ This value is also opposite to the column value . The items will lay down in opp
   }
 ```
 
-![flex-direction: column-reverse;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/column-reverse.png)
+![flex-direction: column-reverse;](https://miro.medium.com/max/1400/1*6_KR0V6FBGB4A7xG1_Bucg.png)
 
 #### C. Flex Wrap
 
@@ -138,35 +140,33 @@ When we have extra items in a flex container then this property comes handy . Le
 
 ```
 <div class="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
-    <div class="item">9</div>
-  </div>
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    font-size: 34px;
-    margin: 10px;
-  }
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+  <div class="item">7</div>
+  <div class="item">8</div>
+  <div class="item">9</div>
+</div>
+* {
+  margin: 0;
+  padding: 0;
+ }
+.container {
+  display: flex;
+  border: 3px solid #000;
+ }
+.item {
+  background: #f3c;
+  padding: 20px 40px;
+  font-size: 3em;
+  margin: 15px;
+ }
 ```
 
-![flex-wrap](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-nowrap.png)
+![flex-wrap](https://miro.medium.com/max/1400/1*QDwObrHNmcgtxyxA1SJOBg.png)
 
 
 In this example we can see that flex-items are overflowing . By default, the flex-container will always accommodate all the new items in a single line, even although the browser needs to be scrolled horizontally. We can fix this problem by **flex-wrap** property .
@@ -183,7 +183,7 @@ This is the default value which will not make any changes . The container will a
   }
 ```
 
-![flex-wrap: nowrap;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-nowrap.png)
+![flex-wrap: nowrap;](https://miro.medium.com/max/1400/1*QDwObrHNmcgtxyxA1SJOBg.png)
 
 ##### (ii) wrap
 
@@ -195,7 +195,7 @@ This value will automatically break the items into new lines , if the container 
   }
 ```
 
-![flex-wrap: wrap;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-wrap.png)
+![flex-wrap: wrap;](https://miro.medium.com/max/1400/1*ifxjGzDCYF_9XOKK-G4KGg.png)
 
 ##### (iii) wrap-reverse
 
@@ -207,7 +207,7 @@ The wrap-reverse is similar to wrap value, but this value wraps the items in the
   }
 ```
 
-![flex-wrap: wrap-reverse;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/wrap-reverse.png)
+![flex-wrap: wrap-reverse;](https://miro.medium.com/max/1400/1*TCqWNKtS6I3aR_UUwlrMSg.png)
 
 #### D. Flex flow
 
@@ -233,7 +233,7 @@ This default value make flex-items start from the starting point on the "main-ax
  }
 ```
 
-![justify-content: flex-start;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/intro.png)
+![justify-content: flex-start;](https://miro.medium.com/max/1400/1*LAq8okZnH5OBZjgtenQEQQ.png)
 
 ##### (ii) flex-end
 
@@ -245,7 +245,7 @@ All the flex-items are laid out towards the endpoint of the "main-axis" and left
  }
 ```
 
-![justify-content: flex-end;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-end.png)
+![justify-content: flex-end;](https://miro.medium.com/max/1368/1*NPz_b3v0KXGMx-NqQgEiog.png)
 
 ##### (iii) center
 
@@ -257,7 +257,7 @@ The 'center' value for 'justify-content' will center the flex-items along the "m
  }
 ```
 
-![justify-content: center;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-end.png)
+![justify-content: center;](https://miro.medium.com/max/1280/1*mdx1D1Dk27M0IAKwsby27A.png)
 
 ##### (iv) space-between
 
@@ -269,7 +269,7 @@ The extra space in the flex container will be evenly distributed between the fle
  }
 ```
 
-![justify-content: space-between;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/space-between.png)
+![justify-content: space-between;](https://miro.medium.com/max/1342/1*on-6uUeCp_OVFXqDF4Y11Q.png)
 
 ##### (v) space-around
 
@@ -282,7 +282,7 @@ The extra space in the flex container will be evenly distributed around the flex
  }
 ```
 
-![justify-content: space-around;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/space-around.png)
+![justify-content: space-around;](https://miro.medium.com/max/1294/1*6ww6_mgGmhL26H3rGEGSog.png)
 
 ##### (vi) space-evenly
 
@@ -294,7 +294,7 @@ The extra space in the flex container will be distributed in such a way that, th
  }
 ```
 
-![justify-content: space-evenly;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/space-evenly.png)
+![justify-content: space-evenly;](https://miro.medium.com/max/1368/1*RItgzCFsoOt_Ux9PehYU1g.png)
 
 >Now we will look into the properties which are based on the **cross-Axis** .
 
@@ -311,25 +311,24 @@ This is the default value . Basically items stretch to fill up the container spa
 
 ```
 .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-  }
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+ }
 ```
 
 or
 
 ```
 .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-    align-items: stretch;
-  }
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+  align-items: stretch;
+ }
 ```
 
-![align-items: stretch;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/stretch.png)
+![align-items: stretch;](https://miro.medium.com/max/1312/1*AwPTojtJdn4isjRBBLI7SQ.png)
 
 ##### (ii) flex-start
 
@@ -337,26 +336,24 @@ The flex-items will be laid out from the starting point on the "cross-Axis" . Ba
 
 ```
 .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-  }
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+ }
 ```
 
 or
 
 ```
 .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-    align-items: flex-start;
-  }
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+  align-items: flex-start;
+ }
 ```
 
-![align-items: flex-start;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/align-start.png)
+![align-items: flex-start;](https://miro.medium.com/max/1320/1*cXOCkgFZwEHAFQaZVyGhSg.png)
 
 ##### (iii) flex-end
 
@@ -364,15 +361,14 @@ The flex-items will be laid out towards the endpoint on the "cross-axis" . Items
 
 ```
 .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-    align-items: flex-end;
-  }
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+  align-items: flex-end;
+ }
 ```
 
-![align-items: flex-end;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/align-end.png)
+![align-items: flex-end;](https://miro.medium.com/max/1338/1*NjaFZZdCzm2uKb6fk5WMJg.png)
 
 ##### (iv) center
 
@@ -380,15 +376,14 @@ The center value for align-items property will center the flex-items along the "
 
 ```
 .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-    align-items: center;
-  }
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+  align-items: center;
+ }
 ```
 
-![align-items: center;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/align-center.png)
+![align-items: center;](https://miro.medium.com/max/1302/1*kb1VbLOu-lS_hc59_hGmNg.png)
 
 ##### (v) baseline
 
@@ -396,41 +391,39 @@ The baseline value aligns the items based on the baseline of the text. this valu
 
 ```
 <!-- HTML -->
-  <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">3</div>
-    <div class="item item4">4</div>
-  </div>
-
-  <!-- CSS -->
-  .container {
-    display: flex;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-    align-items: baseline;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-  }
-  .item1 {
-    font-size: 34px;
-  }
-  .item2 {
-    font-size: 20px;
-  }
-  .item3 {
-    font-size: 48px;
-  }
-  .item4 {
-    font-size: 72px;
-  }
+<div class="container">
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+  <div class="item item4">4</div>
+</div>
+<!-- CSS -->
+.container {
+  display: flex;
+  border: 3px solid #000;
+  height: 350px;
+  align-items: baseline;
+ }
+.item {
+  background: #f3c;
+  padding: 20px 40px;
+  margin: 15px;
+ }
+.item1 {
+  font-size: 34px;
+ }
+.item2 {
+  font-size: 20px;
+ }
+.item3 {
+  font-size: 48px;
+ }
+.item4 {
+  font-size: 72px;
+ }
 ```
 
-![align-items: baseline;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/baseline.png)
+![align-items: baseline;](https://miro.medium.com/max/1344/1*_PN6ckuNE1Meb4RkjXORKw.png)
 
 #### B. Align Content
 
@@ -440,29 +433,27 @@ Lets make some multiple columns first :
 
 ```
 <div class="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
-    <div class="item">9</div>
-  </div>
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    background: #FAFFFC;
-    border: 5px solid #182945;
-    height: 350px;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-  }
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+  <div class="item">7</div>
+  <div class="item">8</div>
+  <div class="item">9</div>
+</div>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid #000;
+  height: 350px;
+ }
+.item {
+  background: #f3c;
+  padding: 20px 40px;
+  margin: 15px;
+ }
 ```
 
 ##### (i) stretch(default)
@@ -477,7 +468,7 @@ The **stretch** is the default value for the align-content property. All the ite
   }
 ```
 
-![align-content: stretch;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-stretch.png)
+![align-content: stretch;](https://miro.medium.com/max/1400/1*oaCmQ6Fx4D_2o7PClr6R6w.png)
 
 ##### (ii) flex-start
 
@@ -491,7 +482,7 @@ All the items in a multi-line flex container will be aligned from the starting p
   }
 ```
 
-![align-content: flex-start;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-start.png)
+![align-content: flex-start;](https://miro.medium.com/max/1400/1*fHvyemm0H3Nk4jr_HN_0pQ.png)
 
 ##### (iii) flex-end
 
@@ -505,7 +496,7 @@ All the items in a multi-line flex-container will be aligned towards the endpoin
   }
 ```
 
-![align-content: flex-end;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-end.png)
+![align-content: flex-end;](https://miro.medium.com/max/1400/1*7xgEzlIr-q_LL23-8pGF_w.png)
 
 ##### (iv) center
 
@@ -519,7 +510,7 @@ Items are laid out to the center of the multi-line flex-container on the "cross-
   }
 ```
 
-![align-content: center;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-center.png)
+![align-content: center;](https://miro.medium.com/max/1400/1*-dcw0paIVWNbH5Wy0vaJOw.png)
 
 ##### (v) space-between
 
@@ -533,7 +524,7 @@ The spaces are evenly distributed between the flex-items on the "cross-axis" as 
   }
 ```
 
-![align-content: space-between;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-between.png)
+![align-content: space-between;](https://miro.medium.com/max/1400/1*7lHSjJRZUEnQGuDBAtQSwg.png)
 
 ##### (vi) space-around
 
@@ -547,7 +538,7 @@ The spaces are evenly distributed around the flex-items on the "cross-axis" as j
   }
 ```
 
-![align-content: space-around;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/content-around.png)
+![align-content: space-around;](https://miro.medium.com/max/1400/1*zVe2f2ZLcUMWW9SttefnWg.png)
 
 ### 1.Properties of Flex-items
 
@@ -564,60 +555,58 @@ We know that the elements are laid out according to the order in which it is wri
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">3</div>
-    <div class="item item4">4</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+  <div class="item item4">4</div>
   </div>
-
-  .container {
-    display: flex;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-  }
-  .item1 {
-    order: 1;
-  }
+.container {
+  display: flex;
+ }
+.item {
+  background: #f3c;
+  padding: 20px 40px;
+  margin: 15px;
+ }
+.item1 {
+   order: 1;
+ }
 ```
 
-![order: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/order1.png)
+![order: 1;](https://miro.medium.com/max/1400/1*rpilnIlXexjdgvkdsTaThg.png)
 
 In the above example we assign **order: 1** to the item1 . Item1 has laid down at the end because order of the item1 is bigger than the other items(default **order: 0**) . Lets take an example which will help you understand the negative order and regarding the order in the html  :
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">3</div>
-    <div class="item item4">4</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+  <div class="item item4">4</div>
   </div>
-
-  .container {
-    display: flex;
+.container {
+  display: flex;
   }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-  }
-  .item1 {
-    order: 2;
-  }
-  .item2 {
-    order: 1;
-  }
-  .item3 {
-    order: 1;
-  }
-  .item4 {
-    order: -1;
-  }
+.item {
+  background: #f3c;
+  padding: 20px 40px;
+  margin: 15px;
+ }
+.item1 {
+  order: 2;
+ }
+.item2 {
+  order: 1;
+ }
+.item3 {
+  order: 1;
+ }
+.item4 {
+  order: -1;
+ }
 ```
 
-![order: -1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/order2.png)
+![order: -1;](https://miro.medium.com/max/1400/1*pJnA9WnzMKIPARdG8JEpWg.png)
 
 In the above example item4 has laid down in the first place and item1 has laid down at the end because item4 has lowest order value which is "-1" and Item1 has the largest order value which is "2" . Item2 and item3 has the same order which is "1" so two of them comes after the item1 and they have laid down according to html markup order .
 
@@ -627,47 +616,46 @@ The **flex-grow** property allows the items to grow if there is extra space insi
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
   </div>
-
-  .container {
-    display: flex;
-  }
-  .item {
-    background: #9EDDEB;padding: 40px 50px;
-    margin: 10px;
-    flex-grow: 1;
-  }
+.container {
+  display: flex;
+ }
+.item {
+  background: #fc3;
+  padding: 20px 40px;
+  margin: 15px;
+  flex-grow: 1;
+ }
 ```
 
-![flex-grow: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-grow1.png)
+![flex-grow: 1;](https://miro.medium.com/max/1228/1*GWQH-BRhMtw8drAxhM-M-Q.png)
 
 If one of the items has a value of 2, the remaining space would take up twice as much space as the others .
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
   </div>
-
-  .container {
-    display: flex;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-  }
-  .item1 {
-    flex-grow: 2;
-  }
-  .item2 {
-    flex-grow: 1;
-  }
+.container {
+  display: flex;
+ }
+.item {
+  background: #fc3;
+  padding: 20px 40px;
+  margin: 15px;
+ }
+.item1 {
+  flex-grow: 2;
+ }
+.item2 {
+  flex-grow: 1;
+ }
 ```
 
-![flex-grow: 2;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-grow2.png)
+![flex-grow: 2;](https://miro.medium.com/max/1302/1*oELvNeGWlG422Fnk30bsQA.png)
 
 #### C. Flex Shrink
 
@@ -675,49 +663,47 @@ The **flex-shrink** property is opposite to the flex-grow property. It allows th
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
   </div>
-
-  .container {
-    display: flex;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-    flex-basis: 300px;
-    flex-shrink: 1;
-  }
+.container {
+  display: flex;
+ }
+.item {
+  background: #fc3;
+  padding: 20px 40px;
+  margin: 15px;
+  flex-basis: 300px;
+  flex-shrink: 1;
+ }
 ```
 
-![flex-shrink: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink1.png)
+![flex-shrink: 1;](https://miro.medium.com/max/1400/1*b4bIedNXAgjoO-hERotHjQ.png)
 
 In this above example we have applied **flex-shrink: 1** . If we reduce the size of the screen items will also reduce .
 
-![flex-shrink: 1;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink2.png)
+![flex-shrink: 1;](https://miro.medium.com/max/876/1*4-4pX-B7R565hhlF8syIEA.png)
 
 If we assign **flex-shrink: 0** then the items will overflow in the flex-container . Lets see with an example :
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
   </div>
-
-  .container {
-    display: flex;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-    flex-basis: 300px;
-    flex-shrink: 0;
-  }
+.container {
+  display: flex;
+ }
+.item {
+  background: #fc3;
+  padding: 20px 40px;
+  margin: 15px;
+  flex-basis: 300px;
+  flex-shrink: 0;
+ }
 ```
 
-![flex-shrink: 0;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink3.png)
+![flex-shrink: 0;](https://miro.medium.com/max/1126/1*fC9UusDrTBN_LTAiDCFsoA.png)
 
 #### D. Flex Basis
 
@@ -725,22 +711,21 @@ The **flex-basis** property is somewhat similar to the width property, as it acc
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
   </div>
-
-  .container {
-    display: flex;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-    flex-basis: 200px;
-  }
+.container {
+  display: flex;
+ }
+.item {
+  background: #fc3;
+  padding: 20px 40px;
+  margin: 15px;
+  flex-basis: 200px;
+ }
 ```
 
-![flex-basis: 200px;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-basis.png)
+![flex-basis: 200px;](https://miro.medium.com/max/1400/1*8OkbPVRDdDM47hMmPlYRzw.png)
 
 > * Flex
 This is the default value for the flex property where the first value is for flex-grow, second is for flex-shrink and the last value is for flex-basis . The last two value for flex property is optional . This is the default value for the flex property where the first value is for flex-grow, second is for flex-shrink and the last value is for flex-basis . The last two value for flex property is optional .
@@ -769,21 +754,20 @@ The **align-self** property is exactly similar to align-items property but only 
 
 ```
 <div class="container">
-    <div class="item item1">1</div>
-    <div class="item item2">2</div>
-    <div class="item item3">2</div>
-  </div>
-
-  .container {
-    display: flex;
-    height: 350px;
-    align-items: flex-start;
-  }
-  .item {
-    background: #9EDDEB;
-    padding: 40px 50px;
-    margin: 10px;
-  }
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">2</div>
+</div>
+.container {
+  display: flex;
+  height: 350px;
+  align-items: flex-start;
+ }
+.item {
+  background: #fc3;
+  padding: 20px 40px;
+  margin: 15px;
+ }
 ```
 
 ##### (i) auto
@@ -796,7 +780,7 @@ The auto value for **align-self** property inherits, whatever the value is set f
   }
 ```
 
-![align-self: auto;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-start.png)
+![align-self: auto;](https://miro.medium.com/max/1280/1*H95P4BBXxlFF4NQUxKvshw.png)
 
 ##### (ii) stretch
 
@@ -808,7 +792,7 @@ The stretch property is to stretch out the size of individual items on the **cro
   }
 ```
 
-![align-self: stretch;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-stretch.png)
+![align-self: stretch;](https://miro.medium.com/max/1268/1*KGpIwqw-jH18ZaicsKKzxg.png)
 
 ##### (iii) flex-start
 
@@ -820,7 +804,7 @@ The item will be aligned from the starting point on the **cross-axis**.
   }
 ```
 
-![align-self: flex-start;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-start.png)
+![align-self: flex-start;](https://miro.medium.com/max/1280/1*H95P4BBXxlFF4NQUxKvshw.png)
 
 ##### (iv) flex-end
 
@@ -832,7 +816,7 @@ The item will be aligned towards the endpoint on the **cross-axis** .
   }
 ```
 
-![align-self: flex-end;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-end.png)
+![align-self: flex-end;](https://miro.medium.com/max/1282/1*dOtMizD6QFf0V58aMYHM8A.png)
 
 ##### (v) center
 
@@ -844,7 +828,7 @@ The item will be aligned at the center on the **cross-axis** .
   }
 ```
 
-![align-self: center;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-center.png)
+![align-self: center;](https://miro.medium.com/max/1260/1*C3pPCKu_o2pzju46FCxGWA.png)
 
 ##### (vi) baseline
 
@@ -856,7 +840,7 @@ We have already seen baseline value for align-items property for the **flex-cont
   }
 ```
 
-![align-self: baseline;](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/item-baseline.png)
+![align-self: baseline;](https://miro.medium.com/max/1280/1*H95P4BBXxlFF4NQUxKvshw.png)
 
 
 >It is better to use flexbox instead of float and inline-block technique .
