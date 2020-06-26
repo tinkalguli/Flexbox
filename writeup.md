@@ -307,14 +307,14 @@ The **align-items** property is similar to **justify-content** property . The on
 
 ##### (i) stretch(default)
 
-This is the default value . Basically items stretch to fill up the container space . If the items has some fix  height(items in a row) or width(items in a column) then we can stretch the items by using this value .
+This is the default value . Basically items stretch to fill up the container space . If the container has some fix height(items in a row) or fix width(items in a column) then we can stretch the items by using this value .
 
 ```
 .container {
   display: flex;
   border: 3px solid #000;
   height: 350px;
- }
+}
 ```
 
 or
@@ -332,7 +332,7 @@ or
 
 ##### (ii) flex-start
 
-The flex-items will be laid out from the starting point on the "cross-Axis" . Basically items starts from the starting point of the "cross-Axis" . Still we can use this value , if the items has some fix  height(items in a row) or width(items in a column) .
+The flex-items will be laid out from the starting point on the "cross-Axis" . Basically items starts from the starting point of the "cross-Axis" . Still we can use this value , if the  container has some fix  height(items in a row) or width(items in a column) .
 
 ```
 .container {
