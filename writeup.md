@@ -22,7 +22,6 @@ We have some properties for flex-container and some properties for flex-items . 
 
 - Properties of Flex-container
   - For main-Axis
-    - Display
     - Flex-direction
     - Flex-wrap
     - Flex-flow
@@ -42,17 +41,18 @@ We have some properties for flex-container and some properties for flex-items . 
 
 ### 1.Properties of Flex-container
 
->First we will discuss about main-Axis's properties which is applied based on the **main-Axis** .
-
 - A. Display
-- B. Flex-direction
-- C. Flex-wrap
-- D. Flex-flow
-- E. Justify-content
 
 #### A. Display
 
 The **display** property is the first step to get a flexbox. We have to assign display property to the element. Display property has two values i.e. **flex** and **inline-flex** .
+
+>>First we will discuss about main-Axis's properties which is applied based on the **main-Axis** .
+
+- B. Flex-direction
+- C. Flex-wrap
+- D. Flex-flow
+- E. Justify-content
 
 ##### (i) flex
 
@@ -296,7 +296,7 @@ The extra space in the flex container will be distributed in such a way that, th
 
 ![justify-content: space-evenly;](https://miro.medium.com/max/1368/1*RItgzCFsoOt_Ux9PehYU1g.png)
 
->Now we will look into the properties which are based on the **cross-Axis** .
+>>Now we will look into the properties which are based on the **cross-Axis** .
 
 - A. Align-items
 - B. Align-content
@@ -542,7 +542,7 @@ The spaces are evenly distributed around the flex-items on the "cross-axis" as j
 
 ### 1.Properties of Flex-items
 
->First we will discuss about main-Axis's properties which is applied based on the **main-Axis** .
+>>First we will discuss about main-Axis's properties which is applied based on the **main-Axis** .
 
 - A. Order
 - B. Flex-grow
@@ -744,7 +744,7 @@ This is the default value for the flex property where the first value is for fle
   }
 ```
 
->Now we will discuss about cross-Axis's properties which is applied based on the **cross-Axis** .
+>>Now we will discuss about cross-Axis's properties which is applied based on the **cross-Axis** .
 
 - A. Align-self
 
@@ -843,4 +843,4 @@ We have already seen baseline value for align-items property for the **flex-cont
 ![align-self: baseline;](https://miro.medium.com/max/1280/1*H95P4BBXxlFF4NQUxKvshw.png)
 
 
->It is better to use flexbox instead of float and inline-block technique .
+>>It is better to use flexbox instead of float and inline-block technique .
