@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="flex flex-between container">
+        <a class="logo" href="#"><img src="assets/images/logo.png" alt="logo"></a>
+        <nav class="navbar">
+          <ul class="flex flex-between">
+            <li><a href="#">home</a></li>
+            <li><a href="#gallery" class="active">gallery</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section container" id="gallery">
+        <h2>Gallery</h2>
+        <div class="flex gallery">
+          <div class="flex-img"><img src="assets/images/01.png" alt="lock"></div>
+          <div class="flex-img"><img src="assets/images/02.png" alt="cycle"></div>
+          <div class="flex-img"><img src="assets/images/03.png" alt="bag"></div>
+          <div class="flex-img"><img src="assets/images/04.png" alt="old car"></div>
+          <div class="flex-img"><img src="assets/images/05.png" alt="girl in a road"></div>
+          <div class="flex-img"><img src="assets/images/06.png" alt="hills with stons"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="flex flex-between container">
+        <small class="logo">&copy; AltCampus</small>
+        <nav class="iconbar">
+          <ul class="flex flex-between icon">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/bd07b7eea7.js" crossorigin="anonymous"></script>
+  </body>
+</html>

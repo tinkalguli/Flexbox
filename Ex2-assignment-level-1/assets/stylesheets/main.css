@@ -1,0 +1,153 @@
+/*=======================================*
+
+                css reset
+
+*========================================*/
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*=======================================*
+
+                  global
+
+*========================================*/
+
+*, *:before, *:after {
+   box-sizing: border-box;
+ }
+
+ body {
+    font-family: 'Roboto', sans-serif;
+ }
+
+h2,
+a {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/*=======================================*
+
+                  typography
+
+*========================================*/
+a {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+small {
+  font-size: .8em;
+}
+
+/*=======================================*
+
+                  header
+
+*========================================*/
+
+.header {
+  background: #222946;
+  padding: 10px 0;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.navbar {
+  flex: 0 1 30%;
+}
+
+.logo {
+  flex: 0 1 10%;
+  color: #fff;
+}
+
+.navbar li {
+  flex: 0 1 17%;
+}
+
+.navbar a:active,
+.active {
+  color: #37B667;
+}
+
+/*=======================================*
+
+                  main
+
+*========================================*/
+
+.section h2 {
+  padding: 5% 0;
+  color: #521717;
+  text-align: center;
+  font-weight: 700;
+}
+
+.gallery {
+  justify-content: space-between;
+  align-content: space-between;
+  height: 520px;
+}
+
+.flex-img {
+  flex: 0 1 30%;
+}
+
+/*=======================================*
+
+                  footer
+
+*========================================*/
+
+.footer {
+  padding: 25px 0;
+  background: #222946;
+  margin-top: 5%;
+}
+
+.iconbar {
+  flex: 0 1 80px;
+}
+
+.icon li {
+  flex: 0 1 15px;
+}
+.fab {
+  color: #222946;
+}
+.icon a {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: #ccc;
+}
